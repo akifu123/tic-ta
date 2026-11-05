@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background: #ffffff;
+  border: 2px solid #333;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 60px;
+  height: 60px;
+  width: 60px;
+  margin-right: -2px;
+  margin-top: -2px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.square:hover {
+  background-color: #e9ecef;
+}
+
+.square:focus-visible {
+  outline: 3px solid #4a90e2;
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.game-info {
+  min-width: 160px;
+}
+
+.game-info ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.game-info li {
+  margin-bottom: 8px;
+}
+
+.game-info button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.game-info button:hover {
+  background-color: #357abd;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+}
